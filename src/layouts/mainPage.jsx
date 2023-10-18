@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 const MainPage = () => {
 
-    return <div className='m-3'>
+    return <div className='m-5'>
         <h1 className='mt-3'>Карточка студента</h1>
         <h3 className='mt-3'>Нет данных</h3>
         <Link to="/form">
