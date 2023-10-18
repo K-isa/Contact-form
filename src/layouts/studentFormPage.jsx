@@ -51,7 +51,10 @@ const StudentFormPage = () => {
         e.preventDefault();
         const isValid = validate()
         if (!isValid) return;
-        console.log(data)
+    }
+
+    const handleClick = () => {
+        localStorage.setItem('data', JSON.stringify(data))
     }
 
     return <form onSubmit={handleSubmit}>
@@ -65,7 +68,7 @@ const StudentFormPage = () => {
                 <TextField name={"portfolio"} type={'text'} value={data.portfolio} onChange={handleChange} label={"Портфолио"} error={errors.portfolio}></TextField>
             </div>
             <Link to="/studentCard">
-                <button type="button" className="btn btn-primary mt-3">Создать</button>
+                <button type="button" className="btn btn-primary mt-3" onClick={handleClick}>Создать</button>
             </Link>
         </div>
     </form>
