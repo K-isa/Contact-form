@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextField = ({ name, value, onChange, label, error , type}) => {
+const TextField = ({ name, value, onChange, label, error, type}) => {
 
     const getInputClass = () => {
         return 'form-control' + (error ? ' is-invalid' : '')
